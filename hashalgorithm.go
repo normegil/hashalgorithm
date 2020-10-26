@@ -1,4 +1,4 @@
-package security
+package hashalgoritm
 
 import (
 	"github.com/google/uuid"

@@ -1,8 +1,8 @@
-package security_test
+package hashalgoritm_test
 
 import (
 	"github.com/google/uuid"
-	"github.com/normegil/blog/internal/security"
+	"github.com/normegil/hashalgorithm"
 	"testing"
 )
 
@@ -35,7 +35,7 @@ func TestBcrypt(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			bcrypt := security.Bcrypt{
+			bcrypt := hashalgoritm.Bcrypt{
 				Identifier: uuid.UUID{},
 				Cost:       0, // Keep cost low for testing purpose
 			}
