@@ -23,6 +23,6 @@ func (h Algorithms) FindByID(id uuid.UUID) Algorithm {
 
 func LoadAll() Algorithms {
 	return []Algorithm{
-		HashAlgorithmBcrypt14(),
+		Bcrypt14(),
 	}
 }
