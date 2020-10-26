@@ -1,0 +1,7 @@
+# Tools
+bin/
+
+#Intellij IDEA
+.idea/*
+!.idea/runConfigurations/
+*.iml
