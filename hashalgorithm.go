@@ -4,15 +4,15 @@ import (
 	"github.com/google/uuid"
 )
 
-type HashAlgorithm interface {
+type Algorithm interface {
 	ID() uuid.UUID
 	HashAndSalt(password string) ([]byte, error)
 	Validate(hash []byte, password string) error
 }
 
-type HashAlgorithms []HashAlgorithm
+type Algorithms []Algorithm
 
-func (h HashAlgorithms) FindByID(id uuid.UUID) HashAlgorithm {
+func (h Algorithms) FindByID(id uuid.UUID) Algorithm {
 	for _, algorithm := range h {
 		if id == algorithm.ID() {
 			return algorithm
@@ -21,8 +21,8 @@ func (h HashAlgorithms) FindByID(id uuid.UUID) HashAlgorithm {
 	return nil
 }
 
-func AllHashAlgorithms() HashAlgorithms {
-	return []HashAlgorithm{
+func LoadAll() Algorithms {
+	return []Algorithm{
 		HashAlgorithmBcrypt14(),
 	}
 }
