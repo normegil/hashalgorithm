@@ -1,4 +1,4 @@
-package hashalgoritm_test
+package hashalgorithm_test
 
 import (
 	"github.com/google/uuid"

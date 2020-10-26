@@ -1,4 +1,4 @@
-package hashalgoritm
+package hashalgorithm
 
 import (
 	"errors"
